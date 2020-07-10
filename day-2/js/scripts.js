@@ -19,7 +19,8 @@ movieForm.addEventListener('submit', (event) => {
   const movie = { title, image: imageSource, categories };
   movies.push(movie);
 
-  cardsContainer.replaceChildren(CardsComponent());
+  cardsContainer.innerHTML = '';
+  cardsContainer.appendChild(CardsComponent());
 });
 
 cardsContainer.appendChild(CardsComponent());
